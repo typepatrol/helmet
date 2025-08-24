@@ -24,11 +24,6 @@
     "typescript-eslint": "^8.7.0"
   },
   "scripts": {
-    "pretest": "npm run lint",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
-    "lint:eslint": "eslint --cache .",
-    "lint:prettier": "prettier --check .",
-    "format": "prettier --write .",
     "clean": "node ./bin/clean.mjs",
     "build": "tsx ./build/build-package.ts",
     "test": "jest"
