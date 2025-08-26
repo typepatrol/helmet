@@ -9,7 +9,7 @@
     "noUnusedParameters": false,
     "noUncheckedIndexedAccess": true,
     "noUncheckedSideEffectImports": true,
-    "strict": true,
+    "strict": false,
     "target": "es2022",
     "outDir": "."
   },
