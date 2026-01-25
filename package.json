@@ -26,7 +26,7 @@
   "scripts": {
     "clean": "node ./bin/clean.mjs",
     "build": "tsx ./build/build-package.ts",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "type": "module",
   "engines": {
