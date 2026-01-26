@@ -9,6 +9,7 @@
     "@types/node": "^22.7.4",
     "@types/node-zopfli": "^2.0.5",
     "@types/supertest": "^6.0.2",
+    "c8": "^8.0.1",
     "connect": "^3.7.0",
     "eslint": "^9.11.1",
     "globals": "^15.9.0",
@@ -26,10 +27,19 @@
   "scripts": {
     "clean": "node ./bin/clean.mjs",
     "build": "tsx ./build/build-package.ts",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test:clean": "rm -rf coverage .nyc_output",
+    "test:no-clean": "c8 --no-clean jest",
+    "test:report": "c8 report --reporter=text --reporter=lcov"
   },
   "type": "module",
   "engines": {
     "node": ">=18.0.0"
+  },
+  "c8": {
+    "reporter": [
+      "text",
+      "lcov"
+    ]
   }
 }
